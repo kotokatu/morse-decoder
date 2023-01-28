@@ -41,7 +41,7 @@ function decode(expr) {
   let res = '';
   for (let i = 0; i < expr.length / 10; i++){
     let letter = expr.slice(i * 10, i * 10 + 10);
-    letter[0] === '*' ? res += ' ' : res += MORSE_TABLE[letter.replace(/^[^'1']*/, '').replaceAll('10', '.').replaceAll('11', '-').replaceAll('*', '')];
+    letter[0] === '*' ? res += ' ' : res += MORSE_TABLE[letter.replace(/^[^'1']*/, '').replaceAll('10', '.').replaceAll('11', '-')];
   }
   return res;
 }
